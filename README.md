@@ -31,7 +31,7 @@ docker run \
 ```
 
 # 2 Linux
-Please explain the functionality of following two files in `Linux-like` operation system.
+Please explain the functionality of the following two files in Linux operation system.
 ```
 /etc/hosts
 /etc/resolv.conf
@@ -57,7 +57,7 @@ Expected output:
 ```
 
 # 4 Git
-Please explain following commands
+Please explain the following commands
 ```
 git add
 git commit
@@ -76,14 +76,15 @@ git reset
 Please describe your findings according to the following datasets respectively.
 
 *Hints:*
-
-* there are some useful utility packages you may need, ex. [user-agents](https://pypi.python.org/pypi/user-agents)
 * try to do some discovering, cleaning or analysis
 
 ## 5.1
 
 * dataset: [dataset1.tar.gz](dataset1.tar.gz)
 * description: list of user agent
+
+*Hints:*
+* there are some useful utility packages you may need, ex. [user-agents](https://pypi.python.org/pypi/user-agents)
 
 ```
 Mozilla/5.0 (Windows NT 10.0; WOW64;  ....
