@@ -70,7 +70,7 @@ Please describe your findings according to the following datasets respectively.
 
 ## Dataset 1
 
-* [dataset1.tgz](dataset1.tgz)
+* [dataset1.tar.gz](dataset1.tar.gz)
 * list of user agent
 
 ```
