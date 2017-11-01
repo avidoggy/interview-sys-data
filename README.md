@@ -1,13 +1,18 @@
 Interview for Bridgewell Sys&Data Team
 =====================================
 
-# 1
+* Except explicitly specified in the question, you could implement by your own way.
+* Please append your implementation if you do write anything for answering the question.
+
+# 1 Docker
+
+## 1.1
 Please explain this command.
 ```
 docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 ```
 
-# 2
+## 1.2
 Please explain this command.
 ```
 docker run \
@@ -25,17 +30,17 @@ docker run \
 	registry.local.test.com/infra/test_docker:0-17.08.03-caf85b05-rc
 ```
 
-# 3
+# 2 Linux
 Please explain the functionality of following two files in `Linux-like` operation system.
 ```
 /etc/hosts
 /etc/resolv.conf
 ```
 
-# 4
+# 4 Bash Script
 Please write a `bash script` to read `access.log` in this repo; find out the log with 404 `return code`; count them group by IP.
 
-expected output:
+Expected output:
 ```
 1 118.163.135.13
 1 123.51.165.114
@@ -49,7 +54,7 @@ expected output:
 4 64.71.171.86
 ```
 
-# 5
+# 5 Git
 Please explain following commands
 ```
 git add
@@ -64,11 +69,16 @@ git rebase
 git reset
 ```
 
-# 6
+# 6 Data Analysis
 
 Please describe your findings according to the following datasets respectively.
 
-## Dataset 1
+*Hints:*
+
+* there are some useful utility packages you may need, ex. [user-agents](https://pypi.python.org/pypi/user-agents)
+* try to do some discovering, cleaning or analysis
+
+## 6.1
 
 * [dataset1.tar.gz](dataset1.tar.gz)
 * list of user agent
@@ -81,7 +91,7 @@ Mozilla/5.0 (Windows NT 6.1) AppleWeb ....
 Mozilla/5.0 (iPhone; CPU iPhone OS 10 ....
 ```
 
-## Dataset 2
+## 6.2
 
 * [dataset2.gz.parquet](dataset2.gz.parquet)
 * timestamp (in micro second) and hashed user id extracted from user visit event logs
@@ -99,10 +109,3 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 10 ....
 only showing top 5 rows
 
 ```
-
-----------
-
-*Hints:*
-
-* there are some useful utility packages you may need, ex. [user-agents](https://pypi.python.org/pypi/user-agents)
-* try to do some discovering, cleaning or analysis
