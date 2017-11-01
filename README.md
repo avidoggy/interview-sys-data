@@ -37,8 +37,10 @@ Please explain the functionality of following two files in `Linux-like` operatio
 /etc/resolv.conf
 ```
 
-# 4 Bash Script
-Please write a `bash script` to read `access.log` in this repo; find out the log with 404 `return code`; count them group by IP.
+# 3 Bash Script
+Please write a `bash script` to read [access.log](access.log);
+find out the logs with `return code 404`;
+count the occurancy of each IP among these logs and output them in accending order.
 
 Expected output:
 ```
@@ -54,7 +56,7 @@ Expected output:
 4 64.71.171.86
 ```
 
-# 5 Git
+# 4 Git
 Please explain following commands
 ```
 git add
@@ -69,7 +71,7 @@ git rebase
 git reset
 ```
 
-# 6 Data Analysis
+# 5 Data Analysis
 
 Please describe your findings according to the following datasets respectively.
 
@@ -78,10 +80,10 @@ Please describe your findings according to the following datasets respectively.
 * there are some useful utility packages you may need, ex. [user-agents](https://pypi.python.org/pypi/user-agents)
 * try to do some discovering, cleaning or analysis
 
-## 6.1
+## 5.1
 
-* [dataset1.tar.gz](dataset1.tar.gz)
-* list of user agent
+* dataset: [dataset1.tar.gz](dataset1.tar.gz)
+* description: list of user agent
 
 ```
 Mozilla/5.0 (Windows NT 10.0; WOW64;  ....
@@ -91,10 +93,10 @@ Mozilla/5.0 (Windows NT 6.1) AppleWeb ....
 Mozilla/5.0 (iPhone; CPU iPhone OS 10 ....
 ```
 
-## 6.2
+## 5.2
 
-* [dataset2.gz.parquet](dataset2.gz.parquet)
-* timestamp (in micro second) and hashed user id extracted from user visit event logs
+* dataset: [dataset2.gz.parquet](dataset2.gz.parquet)
+* description: timestamp (in micro second) and hashed user id extracted from user visit event logs
 
 ```
 +-------------------+----------------+
@@ -107,5 +109,4 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 10 ....
 |   1501545994870040|c3c79186379f219f|
 +-------------------+----------------+
 only showing top 5 rows
-
 ```
