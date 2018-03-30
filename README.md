@@ -2,7 +2,13 @@ Interview for Bridgewell Sys&Data Team
 =====================================
 
 * Except explicitly specified in the question, you could implement by your own way.
-* Please append your implementation if you do write anything for answering the question.
+* Answering question is basic; you are free to show what you can do. Astonish us!
+
+# 0 Git
+
+- Please fork this repository for answering following questions.
+- One question one branch and merge.
+- Email us your repository link.
 
 # 1 Docker
 
@@ -56,29 +62,14 @@ Expected output:
 4 64.71.171.86
 ```
 
-# 4 Git
-Please explain the following commands
-```
-git add
-git commit
-git push
-git fetch
-git pull
-git checkout
-git branch
-git revert
-git rebase
-git reset
-```
-
-# 5 Data Analysis
+# 4 Data Analysis
 
 Please describe your findings according to the following datasets respectively.
 
 *Hints:*
 * try to do some discovering, cleaning or analysis
 
-## 5.1
+## 4.1
 
 * dataset: [dataset1.tar.gz](dataset1.tar.gz)
 * description: list of user agent
@@ -94,7 +85,7 @@ Mozilla/5.0 (Windows NT 6.1) AppleWeb ....
 Mozilla/5.0 (iPhone; CPU iPhone OS 10 ....
 ```
 
-## 5.2
+## 4.2
 
 * dataset: [dataset2.gz.parquet](dataset2.gz.parquet)
 * description: timestamp (in micro second) and hashed user id extracted from user visit event logs
