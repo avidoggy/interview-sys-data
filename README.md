@@ -2,7 +2,7 @@ Interview for Bridgewell Sys&Data Team
 =====================================
 
 * Except explicitly specified in the question, you could implement by your own way.
-* Answering question is basic; you are free to show what you can do. Astonish us!
+* Answering question is requirement; you are free to show what you can do. Astonish us!
 
 # 0 Git
 
@@ -46,7 +46,7 @@ Please explain the functionality of the following two files in Linux operation s
 # 3 Bash Script
 Please write a `bash script` to read [access.log](access.log);
 find out the logs with `return code 404`;
-count the occurancy of each IP among these logs and output them in accending order.
+count the occurrence of each IP among these logs and output them in ascending order.
 
 Expected output:
 ```
