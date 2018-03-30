@@ -105,10 +105,10 @@ only showing top 5 rows
 
 ## 5 Questionnaire
 
-1. How long you spend for answering?
-2. Which question is the most easy to you? Why?
-3. Which question is the most difficult to you? Why?
-4. What is your preferred coworker relationship in terms of working? How about in terms of other aspects of office life?
-5. From what you have surveyed, what aspect of Bridgewell match you the most? What aspect match you the least?
+1. How long did you spend answering?
+2. Which question is the most easy for you? Why?
+3. Which question is the most difficult for you? Why?
+4. Regarding your working style, when coding, do you prefer to work alone or in teams? Same question but when you are doing design and/or research. 
+5. From what you have surveyed, what aspect of Bridgewell matches you the most? What aspect match you the least?
 6. What kind of contribution you expect to make to Bridgewell?
 7. What do you expect to take away from Bridgewell?
