@@ -7,7 +7,8 @@ Interview for Bridgewell Sys&Data Team
 # 0 - Git
 
 - Please fork this repository for answering following questions.
-- One question one branch and merge.
+- For every question, you should create a branch respectively, for example `1-docker`, `2-linux`, and answer on corresponding branch.
+- Merge them into `master` branch. we only examine answers on `master` branch.
 - Email us your repository link.
 
 # 1 - Docker
