@@ -109,5 +109,6 @@ only showing top 5 rows
 2. Which question is the most easy to you? Why?
 3. Which question is the most difficult to you? Why?
 4. What is your preferred coworker relationship in terms of working? How about in terms of other aspects of office life?
-5. From what you have surveyed, what aspect of Bridgewell match you the most? What aspects match you the least?
-6. What is your plan after graduating from Bridgewell?
+5. From what you have surveyed, what aspect of Bridgewell match you the most? What aspect match you the least?
+6. What kind of contribution you expect to make to Bridgewell?
+7. What do you expect to take away from Bridgewell?
