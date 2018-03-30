@@ -4,13 +4,13 @@ Interview for Bridgewell Sys&Data Team
 * Except explicitly specified in the question, you could implement by your own way.
 * Answering question is requirement; you are free to show what you can do. Astonish us!
 
-# 0 Git
+# 0 - Git
 
 - Please fork this repository for answering following questions.
 - One question one branch and merge.
 - Email us your repository link.
 
-# 1 Docker
+# 1 - Docker
 
 ## 1.1
 Please explain this command.
@@ -36,14 +36,14 @@ docker run \
 	registry.local.test.com/infra/test_docker:0-17.08.03-caf85b05-rc
 ```
 
-# 2 Linux
+# 2 - Linux
 Please explain the functionality of the following two files in Linux operation system.
 ```
 /etc/hosts
 /etc/resolv.conf
 ```
 
-# 3 Bash Script
+# 3 - Bash Script
 Please write a `bash script` to read [access.log](access.log);
 find out the logs with `return code 404`;
 count the occurrence of each IP among these logs and output them in ascending order.
@@ -62,7 +62,7 @@ Expected output:
 4 64.71.171.86
 ```
 
-# 4 Data Analysis
+# 4 - Data Analysis
 
 Please describe your findings according to the following datasets respectively.
 
@@ -103,7 +103,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 10 ....
 only showing top 5 rows
 ```
 
-# 5 Questionnaire
+# 5 - Questionnaire
 
 1. How long did you spend answering?
 2. Which question is the most easy for you? Why?
