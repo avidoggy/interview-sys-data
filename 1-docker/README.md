@@ -9,7 +9,7 @@ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 
 > PS `awk` 是使用單引號 `'`. `awk '{print $3}'`
 
-__Answer__ : 找出沒有名字的 images，然後刪除
+__Answer__ : 找出沒有名字的 images 然後刪除
 
 1. 執行 docker images 秀出所有 images
 2. `grep` 以 none 為開頭的行
