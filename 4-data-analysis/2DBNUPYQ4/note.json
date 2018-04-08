@@ -1,0 +1,632 @@
+{
+  "paragraphs": [
+    {
+      "text": "val df \u003d spark.read.parquet(\"/root/dataset2.gz.parquet\")",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "df: org.apache.spark.sql.DataFrame \u003d [timestamp_micro_sec: bigint, user_id: string]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523188898625_646265639",
+      "id": "20180408-120138_1890574302",
+      "dateCreated": "Apr 8, 2018 12:01:38 PM",
+      "dateStarted": "Apr 8, 2018 2:23:08 PM",
+      "dateFinished": "Apr 8, 2018 2:23:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "df.show(10)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------+----------------+\n|timestamp_micro_sec|         user_id|\n+-------------------+----------------+\n|   1501545994088866|c77d0bcc55b624b7|\n|   1501545992833956|c7dd2406697ceb0b|\n|   1501545996724693|cd6ba573a1ea9ea4|\n|   1501545996246811|c2abe46567acd437|\n|   1501545994870040|c3c79186379f219f|\n|   1501545995120173|c126a06096e249dc|\n|   1501545994517775|ce57eddcfeb6b56b|\n|   1501545997568527|cbb9b357b7b4df45|\n|   1501545995079364|c3ae15b378903a19|\n|   1501545997715736|c5f858a23511ba8c|\n+-------------------+----------------+\nonly showing top 10 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523188929496_188460420",
+      "id": "20180408-120209_634261208",
+      "dateCreated": "Apr 8, 2018 12:02:09 PM",
+      "dateStarted": "Apr 8, 2018 2:23:08 PM",
+      "dateFinished": "Apr 8, 2018 2:23:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "df.count()",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res111: Long \u003d 45155\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523191373278_1011532431",
+      "id": "20180408-124253_405838934",
+      "dateCreated": "Apr 8, 2018 12:42:53 PM",
+      "dateStarted": "Apr 8, 2018 2:23:08 PM",
+      "dateFinished": "Apr 8, 2018 2:23:09 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "df.select(\"user_id\").distinct.count",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:09 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res112: Long \u003d 10682\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523193245312_-2025257821",
+      "id": "20180408-131405_1992696027",
+      "dateCreated": "Apr 8, 2018 1:14:05 PM",
+      "dateStarted": "Apr 8, 2018 2:23:09 PM",
+      "dateFinished": "Apr 8, 2018 2:23:10 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "df.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- timestamp_micro_sec: long (nullable \u003d true)\n |-- user_id: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523189783686_-1784320690",
+      "id": "20180408-121623_663375344",
+      "dateCreated": "Apr 8, 2018 12:16:23 PM",
+      "dateStarted": "Apr 8, 2018 2:23:09 PM",
+      "dateFinished": "Apr 8, 2018 2:23:10 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import java.util.concurrent.TimeUnit\nimport org.apache.spark.sql.functions._\nval convert_microseconds_to_seconds \u003d udf((microseconds: Long) \u003d\u003e TimeUnit.SECONDS.convert(microseconds, TimeUnit.MICROSECONDS))",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import java.util.concurrent.TimeUnit\nimport org.apache.spark.sql.functions._\nconvert_microseconds_to_seconds: org.apache.spark.sql.expressions.UserDefinedFunction \u003d UserDefinedFunction(\u003cfunction1\u003e,LongType,Some(List(LongType)))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523190244927_1156200783",
+      "id": "20180408-122404_8130890",
+      "dateCreated": "Apr 8, 2018 12:24:04 PM",
+      "dateStarted": "Apr 8, 2018 2:23:10 PM",
+      "dateFinished": "Apr 8, 2018 2:23:10 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val data \u003d df.withColumn(\"timestamp_sec\", convert_microseconds_to_seconds(col(\"timestamp_micro_sec\")))\n  .withColumn(\"mDatetime\", from_unixtime($\"timestamp_sec\", \"yyyy-MM-dd HH:mm:ss\"))\n  .withColumn(\"mMinutes\", from_unixtime($\"timestamp_sec\", \"mm\"))",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "data: org.apache.spark.sql.DataFrame \u003d [timestamp_micro_sec: bigint, user_id: string ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523190558300_1309960781",
+      "id": "20180408-122918_1302820898",
+      "dateCreated": "Apr 8, 2018 12:29:18 PM",
+      "dateStarted": "Apr 8, 2018 2:23:10 PM",
+      "dateFinished": "Apr 8, 2018 2:23:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val mMaxMicro \u003d data.select(\"timestamp_micro_sec\").sort($\"timestamp_micro_sec\").first.getLong(0)\nval mMinMicro \u003d data.select(\"timestamp_micro_sec\").sort(desc(\"timestamp_micro_sec\")).first.getLong(0)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "mMaxMicro: Long \u003d 1501545600055410\nmMinMicro: Long \u003d 1501549199935920\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523190724519_1567170616",
+      "id": "20180408-123204_2093045851",
+      "dateCreated": "Apr 8, 2018 12:32:04 PM",
+      "dateStarted": "Apr 8, 2018 2:23:10 PM",
+      "dateFinished": "Apr 8, 2018 2:23:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "data.select(\"timestamp_sec\", \"mDatetime\").sort($\"timestamp_sec\").first\ndata.select(\"timestamp_sec\", \"mDatetime\").sort(desc(\"timestamp_sec\")).first",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res114: org.apache.spark.sql.Row \u003d [1501545600,2017-08-01 00:00:00]\nres115: org.apache.spark.sql.Row \u003d [1501549199,2017-08-01 00:59:59]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523191654314_-1153284353",
+      "id": "20180408-124734_1718496355",
+      "dateCreated": "Apr 8, 2018 12:47:34 PM",
+      "dateStarted": "Apr 8, 2018 2:23:11 PM",
+      "dateFinished": "Apr 8, 2018 2:23:12 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "data.printSchema\ndata.show(3)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- timestamp_micro_sec: long (nullable \u003d true)\n |-- user_id: string (nullable \u003d true)\n |-- timestamp_sec: long (nullable \u003d true)\n |-- mDatetime: string (nullable \u003d true)\n |-- mMinutes: string (nullable \u003d true)\n\n+-------------------+----------------+-------------+-------------------+--------+\n|timestamp_micro_sec|         user_id|timestamp_sec|          mDatetime|mMinutes|\n+-------------------+----------------+-------------+-------------------+--------+\n|   1501545994088866|c77d0bcc55b624b7|   1501545994|2017-08-01 00:06:34|      06|\n|   1501545992833956|c7dd2406697ceb0b|   1501545992|2017-08-01 00:06:32|      06|\n|   1501545996724693|cd6ba573a1ea9ea4|   1501545996|2017-08-01 00:06:36|      06|\n+-------------------+----------------+-------------+-------------------+--------+\nonly showing top 3 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523192004698_-494090707",
+      "id": "20180408-125324_701565782",
+      "dateCreated": "Apr 8, 2018 12:53:24 PM",
+      "dateStarted": "Apr 8, 2018 2:23:11 PM",
+      "dateFinished": "Apr 8, 2018 2:23:12 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "data.select(\"user_id\").groupBy(\"user_id\").count.describe().show()",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:12 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+----------------+------------------+\n|summary|         user_id|             count|\n+-------+----------------+------------------+\n|  count|           10682|             10682|\n|   mean|            null|  4.22720464332522|\n| stddev|            null|10.721677348498579|\n|    min|c0008ff82666d84e|                 1|\n|    max|cfffbe152d47ed08|               643|\n+-------+----------------+------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523192829774_2113148442",
+      "id": "20180408-130709_2070073144",
+      "dateCreated": "Apr 8, 2018 1:07:09 PM",
+      "dateStarted": "Apr 8, 2018 2:23:12 PM",
+      "dateFinished": "Apr 8, 2018 2:23:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "data.createOrReplaceTempView(\"data\")",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1523192354197_516551064",
+      "id": "20180408-125914_1791355842",
+      "dateCreated": "Apr 8, 2018 12:59:14 PM",
+      "dateStarted": "Apr 8, 2018 2:23:12 PM",
+      "dateFinished": "Apr 8, 2018 2:23:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val outside_samples \u003d data.select(\"user_id\").groupBy(\"user_id\").count.where($\"count\" \u003e 34)\nval inside_samples \u003d data.select(\"user_id\").groupBy(\"user_id\").count.where($\"count\" \u003c\u003d 34)\n\ndata.select(\"user_id\").groupBy(\"user_id\").count.where($\"count\" \u003c 25).count\noutside_samples.count\ninside_samples.count",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:14 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "outside_samples: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [user_id: string, count: bigint]\ninside_samples: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [user_id: string, count: bigint]\nres121: Long \u003d 10381\nres122: Long \u003d 152\nres123: Long \u003d 10530\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523193090623_928277239",
+      "id": "20180408-131130_833261689",
+      "dateCreated": "Apr 8, 2018 1:11:30 PM",
+      "dateStarted": "Apr 8, 2018 2:23:14 PM",
+      "dateFinished": "Apr 8, 2018 2:23:17 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val calculate_freq \u003d  udf((mMax:Long, mMin:Long, count:Int) \u003d\u003e (mMax-mMin)/count)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:15 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "calculate_freq: org.apache.spark.sql.expressions.UserDefinedFunction \u003d UserDefinedFunction(\u003cfunction3\u003e,LongType,Some(List(LongType, LongType, IntegerType)))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523195966752_-559656792",
+      "id": "20180408-135926_1707758639",
+      "dateCreated": "Apr 8, 2018 1:59:26 PM",
+      "dateStarted": "Apr 8, 2018 2:23:15 PM",
+      "dateFinished": "Apr 8, 2018 2:23:17 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val frequencyDf \u003d data.join(outside_samples, Seq(\"user_id\"), \"inner\")\n  .groupBy(\"user_id\", \"count\")\n  .agg(\n    \"timestamp_sec\" -\u003e \"max\",\n    \"timestamp_sec\" -\u003e \"min\"\n  )\n  .withColumn(\"freq\", calculate_freq($\"max(timestamp_sec)\", $\"min(timestamp_sec)\", $\"count\"))\n\nfrequencyDf.sort(asc(\"freq\")).show(10)\n\nfrequencyDf.createOrReplaceTempView(\"freq\")",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:17 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "frequencyDf: org.apache.spark.sql.DataFrame \u003d [user_id: string, count: bigint ... 3 more fields]\n+----------------+-----+------------------+------------------+----+\n|         user_id|count|max(timestamp_sec)|min(timestamp_sec)|freq|\n+----------------+-----+------------------+------------------+----+\n|c063824c8a2aba59|   49|        1501548112|        1501548028|   1|\n|cae588e5cf11d067|   76|        1501547155|        1501546824|   4|\n|c32a9ad2344f11ee|  643|        1501549194|        1501545617|   5|\n|c651da422858b097|   36|        1501549196|        1501548952|   6|\n|ccc0b9acec4f5f2b|   64|        1501549197|        1501548681|   8|\n|cea4cc81e0825251|   37|        1501548490|        1501548123|   9|\n|c635218fb9295aa7|   80|        1501548741|        1501547914|  10|\n|c63bf2550485791b|   62|        1501548981|        1501548258|  11|\n|c37371908141c3ae|  133|        1501549196|        1501547614|  11|\n|ce26c6f0d1aaf9ef|   36|        1501547597|        1501547199|  11|\n+----------------+-----+------------------+------------------+----+\nonly showing top 10 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523194279264_692306859",
+      "id": "20180408-133119_2065833311",
+      "dateCreated": "Apr 8, 2018 1:31:19 PM",
+      "dateStarted": "Apr 8, 2018 2:23:17 PM",
+      "dateFinished": "Apr 8, 2018 2:23:19 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect *\nfrom freq",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": true,
+              "setting": {
+                "pieChart": {},
+                "scatterChart": {
+                  "yAxis": {
+                    "name": "count",
+                    "index": 1.0,
+                    "aggr": "sum"
+                  },
+                  "xAxis": {
+                    "name": "freq",
+                    "index": 4.0,
+                    "aggr": "sum"
+                  }
+                },
+                "lineChart": {}
+              },
+              "keys": [
+                {
+                  "name": "count",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "freq",
+                  "index": 4.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql"
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "user_id\tcount\tmax(timestamp_sec)\tmin(timestamp_sec)\tfreq\nc4ecbe9bef706fc6\t47\t1501548789\t1501546164\t55\nc463d78ed1e6894c\t88\t1501549166\t1501546574\t29\nc6074bc6b2e609ec\t35\t1501549108\t1501545649\t98\nccaa9e94120f2e3f\t46\t1501548891\t1501545622\t71\nc25b1b86a1c107c7\t46\t1501549134\t1501545706\t74\nc9fb5c28fd664477\t45\t1501549182\t1501546552\t58\nc75641c8aec8052c\t37\t1501548761\t1501546195\t69\ncb0911eb6c895e08\t56\t1501548009\t1501546788\t21\ncc651efcd4eece24\t40\t1501547885\t1501545676\t55\nc9e16e11f799f220\t46\t1501548256\t1501547412\t18\nc63bf2550485791b\t62\t1501548981\t1501548258\t11\nccb54fa600754b41\t37\t1501547875\t1501547245\t17\nca44f5c97e3f437f\t68\t1501548415\t1501546984\t21\nc7b24036bb2bee0b\t47\t1501549018\t1501545638\t71\ncde209074f912c49\t49\t1501548427\t1501545866\t52\nc651da422858b097\t36\t1501549196\t1501548952\t6\nc88395a1c5a51a55\t35\t1501549072\t1501545969\t88\nc7b66b141104e007\t67\t1501547304\t1501545709\t23\ncc48ce2e03606ec2\t43\t1501549142\t1501548435\t16\ncd6761d0f7335a03\t99\t1501549134\t1501545614\t35\nca0f62d93965b5b9\t47\t1501546622\t1501545606\t21\nc80dc34809636597\t47\t1501548341\t1501547681\t14\nc08007c42de23e35\t53\t1501548917\t1501547026\t35\nc11d5e535f2265bf\t40\t1501548676\t1501546608\t51\nc0a4b7bf1d282178\t66\t1501548300\t1501547392\t13\ncb6be33730bf5d5b\t41\t1501547823\t1501546661\t28\ncf520a71933ee122\t47\t1501548318\t1501546003\t49\nc313111d3b41c6a2\t78\t1501549170\t1501545614\t45\nc0481c5ef231a248\t58\t1501548702\t1501547609\t18\nc823f117f8be22f5\t35\t1501549153\t1501547148\t57\ncea4cc81e0825251\t37\t1501548490\t1501548123\t9\nce0c1e1a76153918\t40\t1501547998\t1501546928\t26\nc87f5dac884826a8\t44\t1501547047\t1501545609\t32\nc51565f5e38933bd\t49\t1501547082\t1501545807\t26\ncac972a22560bbc4\t61\t1501548869\t1501545701\t51\nc1f0851ee48f973a\t61\t1501549171\t1501545611\t58\nc8934cd1078db6d3\t66\t1501548106\t1501546311\t27\nc5d83929af3b054f\t38\t1501548626\t1501547476\t30\nc04d06d9adbc747c\t45\t1501549074\t1501547723\t30\ncd01d07481f89a0b\t43\t1501548866\t1501547640\t28\nce57eddcfeb6b56b\t46\t1501547338\t1501545793\t33\ncebc0636663de2bd\t40\t1501548063\t1501546407\t41\nc38d94b7ed1bce40\t40\t1501546608\t1501545606\t25\nca89ba5da073adf8\t55\t1501548909\t1501545607\t60\nc1a12b61c10ebc45\t60\t1501548615\t1501547204\t23\nc158f7a53a576232\t53\t1501548300\t1501545761\t47\nc063824c8a2aba59\t49\t1501548112\t1501548028\t1\nc52c0ef710519e1d\t69\t1501548692\t1501546353\t33\nccf41ba02f6907d3\t44\t1501549163\t1501546760\t54\nc799494aae9a3631\t46\t1501548881\t1501545645\t70\ncb08793cb42e50cb\t90\t1501548785\t1501546783\t22\nc1f596c0fb6be67c\t38\t1501549143\t1501545651\t91\nc36164769e8223bc\t91\t1501549054\t1501546634\t26\nc9be8ab4f726f27d\t78\t1501549027\t1501547590\t18\nc90dea01ad334201\t83\t1501549195\t1501546321\t34\nce190d3465795113\t37\t1501549174\t1501546367\t75\nc175c543414790f4\t52\t1501547784\t1501547183\t11\nc3f68a562590c4e6\t129\t1501549111\t1501547562\t12\nccf1c6509d1a492f\t36\t1501549142\t1501547905\t34\nc192597883ac7b73\t40\t1501548750\t1501547843\t22\ncc347278d7115cc7\t61\t1501548935\t1501547941\t16\ncb9dca175ae1163b\t35\t1501547012\t1501546259\t21\ncbb8b60e872cd968\t49\t1501547971\t1501546500\t30\ncb0d4d324fa365ee\t71\t1501546975\t1501545789\t16\nc8684067fba321e6\t47\t1501549187\t1501548082\t23\nc83b61bbed31eea9\t36\t1501549077\t1501548444\t17\nc796a4d101dd33fc\t38\t1501548315\t1501545863\t64\nc98ae3a5e691673c\t59\t1501549108\t1501545658\t58\nc2930c2119f2a326\t85\t1501547013\t1501545620\t16\ncdf1f187ac753214\t47\t1501549114\t1501545754\t71\nc7d865b579c4fed6\t45\t1501547075\t1501546397\t15\nc2a65e7e9cb2bd40\t89\t1501548286\t1501545783\t28\nc4150d81dbf2a3ab\t37\t1501549120\t1501546716\t64\nc0b51930a8ab7dc5\t54\t1501547419\t1501545798\t30\nc5f6ce96abe6a746\t53\t1501548453\t1501545762\t50\nc98ad6cc933b9e7c\t36\t1501548066\t1501547566\t13\nc32a9ad2344f11ee\t643\t1501549194\t1501545617\t5\nc32faa53f3c928f0\t51\t1501549033\t1501547744\t25\nc3e43322ae5547e5\t81\t1501548983\t1501545642\t41\nc8836c628fba668f\t60\t1501548479\t1501546958\t25\nc7c8eb7b2eb25dd5\t42\t1501549183\t1501547712\t35\nc0935f94973ac424\t47\t1501549170\t1501547082\t44\ncc6471247fb35297\t90\t1501547145\t1501545600\t17\nc8850a65288ada83\t61\t1501549098\t1501545619\t57\nc87f7ee52f24e144\t48\t1501548766\t1501545974\t58\nc4509381e8f4cd5f\t38\t1501547686\t1501546902\t20\nc2cdb809a9973ad5\t42\t1501548855\t1501545899\t70\nc60995c328d19df0\t54\t1501547400\t1501545608\t33\ncf2fd4ae7293f018\t42\t1501548656\t1501547247\t33\nc22c5e89262fd574\t42\t1501548503\t1501547830\t16\nc7e78c3879f468bb\t88\t1501548918\t1501546163\t31\nc8b43f17c07e5f25\t46\t1501548833\t1501545693\t68\nc452848ebd797b59\t216\t1501549188\t1501546455\t12\nc4255f589e4a685c\t49\t1501549153\t1501547754\t28\nc8e17fab764e79c6\t38\t1501547728\t1501545923\t47\nc4664d5e140127ad\t61\t1501549066\t1501546567\t40\nc8394b8cf3410698\t64\t1501547402\t1501546035\t21\nc642a5ba500bf715\t59\t1501549096\t1501546437\t45\nc5f548b006f7fa50\t40\t1501547075\t1501545774\t32\nc63b74c6a5ed7ee3\t39\t1501548721\t1501546943\t45\ncae588e5cf11d067\t76\t1501547155\t1501546824\t4\nce4a746ab9d05492\t61\t1501549197\t1501548014\t19\nca068426c972884f\t198\t1501548381\t1501545627\t13\nc72970c75a23a974\t54\t1501547674\t1501546506\t21\nc1adf4c9a6bf523e\t42\t1501549108\t1501545725\t80\nc1cb699918e5fc2b\t35\t1501548787\t1501546484\t65\ncb0aab6e4b944b83\t52\t1501549012\t1501546917\t40\nc83f2c13eb070e67\t50\t1501549019\t1501546072\t58\nc9aa08e27e4a621c\t134\t1501549197\t1501545933\t24\nc6efa19f699d9764\t74\t1501549175\t1501547231\t26\nceb6b2dda5e04918\t213\t1501549170\t1501545604\t16\nc7f0e6a122ffa338\t64\t1501547415\t1501546065\t21\nc9f0046d91550022\t37\t1501547767\t1501545897\t50\ncad9796e807ec4de\t38\t1501549060\t1501547686\t36\nc37371908141c3ae\t133\t1501549196\t1501547614\t11\nc83ae6bc978a11bc\t61\t1501549190\t1501546108\t50\nc65aeb064e8e7b77\t43\t1501548858\t1501545613\t75\nc31ff483df2fc6a7\t48\t1501548870\t1501547986\t18\nc0af378c6dfce4f8\t59\t1501549190\t1501548262\t15\nceb8396891cb0bee\t43\t1501548705\t1501546073\t61\nc8ca283b7306a90a\t76\t1501549180\t1501546993\t28\ncaa51bbf07187189\t43\t1501547378\t1501545607\t41\nc53f682e88726941\t50\t1501548857\t1501545738\t62\nce26c6f0d1aaf9ef\t36\t1501547597\t1501547199\t11\nc9e4f8f2ea74277a\t67\t1501548500\t1501545631\t42\nceff22bdc2f336ed\t55\t1501548893\t1501545612\t59\nc77e970a9d98a83e\t54\t1501548408\t1501547361\t19\nce2998174c0dbc7a\t72\t1501548605\t1501545667\t40\nc4800d6ced54c23b\t36\t1501547073\t1501546616\t12\nc6b30da71b2eaba4\t37\t1501546376\t1501545723\t17\ncdab736003fbff2a\t39\t1501547544\t1501546266\t32\ncd6ba573a1ea9ea4\t49\t1501546625\t1501545958\t13\nc65a956102fdf532\t42\t1501546895\t1501546248\t15\nc756d7f98c9345a6\t37\t1501546895\t1501546011\t23\nc5d63fb4044fa7e5\t86\t1501548986\t1501546378\t30\nc78e4d8bbdb34582\t58\t1501548905\t1501546401\t43\nc7f305c9bbd411d4\t107\t1501548767\t1501545744\t28\nccbe3df099f6c761\t61\t1501547078\t1501545665\t23\nc3b4ffb9bb3781e2\t45\t1501549154\t1501548294\t19\nc61167a6b43c51cd\t38\t1501548846\t1501545704\t82\nc53df0ad976fb54a\t58\t1501548427\t1501545681\t47\nc67e0bbeb0cdd90b\t46\t1501547342\t1501545611\t37\ncb72eda663331b78\t53\t1501546962\t1501545601\t25\nc4c16afa29d9142f\t45\t1501546385\t1501545771\t13\nccc0b9acec4f5f2b\t64\t1501549197\t1501548681\t8\ncdb82622c3e4647a\t39\t1501549183\t1501548237\t24\nc635218fb9295aa7\t80\t1501548741\t1501547914\t10\nc1b819e3b4cfe9ec\t63\t1501549187\t1501545859\t52\nc10b22ea694c4fce\t40\t1501548849\t1501548312\t13\nc5f7887fa6435733\t78\t1501549185\t1501545767\t43\nc5f7c89cb3b1fb23\t36\t1501548233\t1501547515\t19\nc0c844e408d4ee94\t42\t1501549155\t1501548325\t19\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1523192654039_-1764395302",
+      "id": "20180408-130414_1870021049",
+      "dateCreated": "Apr 8, 2018 1:04:14 PM",
+      "dateStarted": "Apr 8, 2018 2:23:17 PM",
+      "dateFinished": "Apr 8, 2018 2:23:20 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n",
+      "user": "anonymous",
+      "dateUpdated": "Apr 8, 2018 2:23:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sql"
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1523192668906_-482766067",
+      "id": "20180408-130428_373685409",
+      "dateCreated": "Apr 8, 2018 1:04:28 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "4_2",
+  "id": "2DBNUPYQ4",
+  "angularObjects": {
+    "2DARAGAPZ:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
