@@ -22,16 +22,16 @@ RUN wget -q https://bootstrap.pypa.io/get-pip.py && \
 #     tar zxf spark-2.3.0-bin-hadoop2.7.tgz && rm -f spark-2.3.0-bin-hadoop2.7.tgz && \
 #     ln -s spark-2.3.0-bin-hadoop2.7 spark
 
-# RUN wget -q https://archive.apache.org/dist/zeppelin/zeppelin-0.7.3/zeppelin-0.7.3-bin-netinst.tgz && \
-#     tar zxf zeppelin-0.7.3-bin-netinst.tgz && rm -f zeppelin-0.7.3-bin-netinst.tgz && \
-#     ln -s zeppelin-0.7.3-bin-netinst zeppelin
-
-RUN wget -q https://raw.githubusercontent.com/alexarchambault/jupyter-scala/master/jupyter-scala && \
-    /bin/bash jupyter-scala && rm -f jupyter-scala
+RUN wget -q https://archive.apache.org/dist/zeppelin/zeppelin-0.7.3/zeppelin-0.7.3-bin-netinst.tgz && \
+    tar zxf zeppelin-0.7.3-bin-netinst.tgz && rm -f zeppelin-0.7.3-bin-netinst.tgz && \
+    ln -s zeppelin-0.7.3-bin-netinst zeppelin
 
 ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0/
 # ENV SPARK_HOME /usr/lib/python2.7/site-packages/pyspark
-# ENV ZEPPELIN_HOME /opt/zeppelin
+ENV ZEPPELIN_HOME /zeppelin
+ENV ZEPPELIN_NOTEBOOK_DIR /root/zeppelin-notebook
+ENV SPARK_SUBMIT_OPTIONS "--driver-memory 8G"
+ENV MASTER "local[*]"
 
 ADD access.log /root/
 ADD dataset1.tar.gz /root/
