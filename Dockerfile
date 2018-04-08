@@ -1,7 +1,7 @@
 FROM centos
 
 RUN yum update -y && \
-    yum install -y python-devel wget gcc java-1.8.0-openjdk-headless && \
+    yum install -y python-devel wget which gcc java-1.8.0-openjdk-headless && \
     yum autoremove -y && yum clean all && \
     rm -rf /var/cache/yum
 
@@ -9,6 +9,7 @@ RUN wget -q https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py --no-cache-dir && rm -f get-pip.py && \
     pip install --no-cache-dir \
         pyspark \
+        pandas \
         scipy \
         matplotlib \
         scikit-learn \
